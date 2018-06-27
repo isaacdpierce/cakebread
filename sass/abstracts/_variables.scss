@@ -1,6 +1,9 @@
-$color-primary: #c69963;
-$color-primary-dark: #B28451;
+$color-primary: #FF7A5E;
+$color-primary-dark: #582600;
+$color-primary-light: #FFB1A8;
+
 $color-secondary: #101d2c;
+
 $color-grey-light-1 : #ededee;
 $color-grey-light-2: #babcbd;
 $color-grey-light-3: #999;
@@ -9,11 +12,87 @@ $color-grey-dark-2: rgb(28, 32, 38);
 $color-grey-dark-3: rgb(4, 4, 4);
 
 
+
+
 // FONT VARIABLES
+
+
+/************* FONTS *************/
 $font-primary: 'Cormorant Garamond', serif;
+$base-font: 'Cormorant Garamond', 'Cormorant', serif;
+$secondary-font: 'Lato', 'Open Sans', sans-serif;
+$logo-font: 'Courier New', Courier, monospace;
+
 
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; // 1200px / 16px(default browser font  size) = 75
 $bp-large: 62.5em; // 1000px / 16px
 $bp-medium: 50em; // 800px / 16px
 $bp-small: 37.5em; // 000px / 16px
+
+/************* COLORS *************/
+
+$brand-color: #993300;
+$brand-color-light: #9c5d3e;
+$brand-color-hover: #789fbf;
+$accent-color: #a1a2a5;
+
+$grey-light:  #696969;
+$grey-medium: #2c2c2c;
+$grey-dark:   #161616;
+$grey-darker: #0b0b0b;
+
+$error-color: #691908;
+$success-color: #637c55;
+
+
+$primary-font-color: #d1d1d1;
+$secondary-font-color: #a7a7a7;
+
+$black-02: rgba(0, 0, 0, 0.02);
+$black-03: rgba(0, 0, 0, 0.03);
+$black-10: rgba(0, 0, 0, 0.1);
+$black-20: rgba(0, 0, 0, 0.2);
+$black-30: rgba(0, 0, 0, 0.3);
+$black-40: rgba(0, 0, 0, 0.4);
+$black-50: rgba(0, 0, 0, 0.5);
+$black-60: rgba(0, 0, 0, 0.6);
+$black-70: rgba(0, 0, 0, 0.7);
+$black-80: rgba(0, 0, 0, 0.8);
+$black-85: rgba(0, 0, 0, 0.85);
+$black-90: rgba(0, 0, 0, 0.9);
+
+$grey-90: #191919;
+$grey-80: #2f2f2f;
+$grey-70: #464646;
+$grey-60: #5e5e5e;
+$grey-50: #757575;
+$grey-40: #8c8c8c;
+$grey-30: #a3a3a3;
+$grey-20: #bababa;
+$grey-10: #d1d1d1;
+$grey-05: #e8e8e8;
+
+
+$white-10: rgba(255, 255, 255, 0.1);
+$white-10: rgba(255, 255, 255, 0.1);
+$white-20: rgba(255, 255, 255, 0.2);
+$white-30: rgba(255, 255, 255, 0.3);
+$white-40: rgba(255, 255, 255, 0.4);
+$white-50: rgba(255, 255, 255, 0.5);
+$white-60: rgba(255, 255, 255, 0.6);
+$white-70: rgba(255, 255, 255, 0.7);
+$white-80: rgba(255, 255, 255, 0.8);
+$white-90: rgba(255, 255, 255, 0.9);
+
+
+/************* FONT SIZES *************/
+
+$fs-5: 4.2rem;
+$fs-4: 3.6rem;
+$fs-3: 2.6rem;
+$fs-2: 2.0rem;
+$fs-1: 1.8rem;
+
+$fs-s1: 1.3rem;
+$fs-s2: 1.1rem;

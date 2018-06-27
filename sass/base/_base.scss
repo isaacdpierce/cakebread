@@ -20,15 +20,15 @@ body {
   color: $color-grey-dark-2;
   font-weight: 300;
   line-height: 1.6;
+  
 }
 
 .container {
-//  background-image: linear-gradient(rgba($color-grey-light-2, .60), rgba($color-grey-light-2, .93));
-  
-
   display: grid;
-  grid-template-rows: 100vh 85vh;//min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 24vw [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100vh 100vh 100vh 100vh 100vh 100vh;
+  background-color: rgba(235, 231, 231, 0.13);
+  background-image: url("/img/whitey.png");
   
   }
   

@@ -7,6 +7,7 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/article";
 @import "components/bg-video";
 @import "components/button";
 @import "components/card";
@@ -14,10 +15,14 @@
 @import "components/story";
 
 @import "layout/footer";
+@import "layout/food";
 @import "layout/grid";
 @import "layout/header";
+@import "layout/main";
 @import "layout/navigation";
 @import "layout/sidebar";
+
+@import "objects/logo";
 
 @import "pages/home";
 @import "pages/contact";

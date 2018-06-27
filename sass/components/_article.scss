@@ -1,0 +1,84 @@
+.article-container {
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+  min-height: 100vh;
+  @include grid-lg;
+  grid-template-rows: repeat(8, minmax(90px, auto));
+
+  &--short {
+    height: 80vh;
+    min-height: 80vh;
+  }
+}
+
+.article {
+  grid-column:4 / 12;
+  grid-row: 3 / span 5;
+  margin-left: 4rem;
+  
+  @include grid-sm;
+  grid-gap: 2rem 2rem;
+  align-content: start;
+
+  &__head {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-row-gap: 3rem;
+    
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+    font-family: $base-font;
+    font-size: $fs-4;
+    font-weight: 100;
+    position: relative;
+  }
+
+  &__subtitle {
+    grid-column: 1 / -1;
+    font-size: $fs-2;
+    font-family: $base-font;
+    color: $secondary-font-color;
+    font-weight: 100;
+  }
+
+  &__quote {
+    grid-column: 1 / -1;
+    font-family: $secondary-font;
+    color: $secondary-font-color;
+    letter-spacing: .15em;
+    justify-self: start;
+    text-align: center;
+
+    &--icon {
+      transform: translate(-3px, -3px);
+      color: #555;
+      font-size: 3.5rem;
+    }
+  }
+
+  &__cta {
+    font-size: $fs-1;
+    color: $brand-color-light;
+  }
+
+  &__paragraph {
+    font-family: $secondary-font;
+    font-size: $fs-1;
+    grid-column: 1 / -1;
+    letter-spacing: .1em;
+  }
+
+  @include respond(tab-port) {
+    grid-column: 4 / -4;
+    grid-row: 3 / 7;
+    margin-left: 0;
+  }
+
+  @include respond(phone) {
+    grid-column: 2 / -2;
+    grid-row: 3 / 7;
+    margin-left: 0;
+  }
+}
