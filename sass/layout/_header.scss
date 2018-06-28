@@ -4,19 +4,18 @@
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 20rem calc(100vh - 6rem);
+  grid-template-rows: 15rem 80vh;
 
   &__img {
     grid-column: 1 / -1;
     grid-row: 1 /  -1;
-    overflow: hidden;
-    z-index: 99;
  
-  
+
     &--bread {
       height: 100%;
       width: 100%;
       object-fit: cover;
+      
       
       
     }

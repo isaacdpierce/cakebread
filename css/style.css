@@ -260,7 +260,7 @@ p {
 
 .loaf {
   position: absolute;
-  top: 79%;
+  top: 75%;
   left: -33%;
   height: 100rem;
   width: 100rem;
@@ -276,12 +276,10 @@ p {
   grid-row: 1 / span 1;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 20rem calc(100vh - 6rem); }
+  grid-template-rows: 15rem 80vh; }
   .header__img {
     grid-column: 1 / -1;
-    grid-row: 1 /  -1;
-    overflow: hidden;
-    z-index: 99; }
+    grid-row: 1 /  -1; }
     .header__img--bread {
       height: 100%;
       width: 100%;
@@ -290,7 +288,7 @@ p {
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(6, 100vh);
+  grid-template-rows: auto repeat(6, 100vh);
   background-color: #eeecec;
   background-image: url("/img/whitey.png"); }
 
@@ -350,4 +348,4 @@ p {
     text-decoration: none; }
 
 .logo__img {
-  height: 12rem; }
+  height: 10rem; }
