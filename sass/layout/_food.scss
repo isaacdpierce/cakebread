@@ -8,7 +8,7 @@
 
 .croissant { 
   position: absolute;
-  top: 26%;
+  top: 23%;
   left: 60%;
   height: 60rem;
   width: 60rem;
@@ -23,15 +23,112 @@
 
 .brownie { 
   position: absolute;
-  top: 73%;
+  top: 55%;
   left: 60%;
   height: 60rem;
   width: 60rem;
   overflow: hidden;
+  z-index: 99;
+  
 
   &__img {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    
+  }
+}
+
+
+.napkin-fold { 
+  position: absolute;
+  top: 32%;
+  left: -10%;
+  height: 50rem;
+  width: 50rem;
+  overflow: hidden;
+ 
+  transform: rotate(30deg);
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    
+  
+  }
+}
+
+.napkin { 
+  position: absolute;
+  top: 54%;
+  left: 60%;
+  height: 60rem;
+  width: 60rem;
+  transform: rotate(30deg);
+  overflow: hidden;
+  
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    
+    z-index: 1;
+  }
+}
+
+.cake { 
+  position: absolute;
+  top: 39%;
+  left: -5%;
+  height: 100rem;
+  width: 70rem;
+  overflow: hidden;
+  transform: rotate(-3deg);
+  transform-origin: bottom left;
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    
+  
+  }
+}
+.cookie { 
+  position: absolute;
+  top: 73%;
+  left: 60%;
+  height: 39rem;
+  width: 39rem;
+  overflow: hidden;
+  
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    
+  
+  }
+}
+
+.loaf { 
+  position: absolute;
+  top: 79%;
+  left: -33%;
+  height: 100rem;
+  width: 100rem;
+  overflow: hidden;
+  
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transform: rotate(85deg);
+    
+  
   }
 }

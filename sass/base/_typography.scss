@@ -1,18 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,500,500i,700|Open+Sans:300,300i,400,400i|Raleway:100,100i,300,300i,500,500i,900');
+
+body {
+  color: $grey-90;
+  font-family: $font-primary;
+}
+
 // Sass placeholder use in other rules with @extend
 %heading {
   font-family: $font-primary;
   font-weight: 300;
 }
 
+
 .heading-1 {
   @extend %heading;
   font-size: 4.5rem;
-  color: $color-grey-light-1;
+  @include text-color('light', 'medium');
   line-height: 1;
-
-  @media only screen and (max-width: $bp-large) {
-    font-size: 4rem;
-  }
 }
 
 .heading-2 {
@@ -21,22 +25,18 @@
   line-height: 1;
   letter-spacing: 1.1px;
 
-  @media only screen and (max-width: $bp-large) {
-    font-size: 3.5rem;
-  }
-
   &--light {
-    color: $color-grey-light-3;
+    @include text-color('light', 'medium');
   }
   &--dark {
-    color: $color-grey-dark-1;
+    @include text-color('light', 'high');
   }
 }
 
 .heading-3 {
   @extend %heading;
   font-size: 1.6rem;
-  color: $color-grey-light-3;
+  @include text-color('light', 'medium');
   text-transform: uppercase;
 }
 
@@ -44,9 +44,17 @@
   @extend %heading;
   font-size: 1.9rem;
   &--light {
-    color: $color-grey-light-1;
+    @include text-color('light', 'medium');
   }
   &--dark {
-    color: $color-grey-dark-1;
+    @include text-color('light', 'high');
   }
 }
+
+p {
+  letter-spacing: .065em;
+  line-height: 1.4em;
+  font-weight: 200;
+  @include text-color('light', 'high');
+}
+

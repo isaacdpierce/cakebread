@@ -1,0 +1,19 @@
+// TEXT COLOR MANAGER
+
+@function contrast($background: 'light', $type: 'primary') {
+  $map: map-get($contrast-colors, $background);
+  @return map-get($map, $type);
+}
+// MIXIN FOR ABOVE FUNCTION  - in mixins.scss
+// @mixin text-color($background: 'light', $type: 'primary') {
+//   color: contrast($background, $type);
+// }
+
+@function brand($background: 'light', $type: 'primary') {
+  $map: map-get($brand-colors, $background);
+  @return map-get($map, $type);
+}
+// MIXIN FOR ABOVE FUNCTION  - in mixins.scss
+// @mixin brand-text-color($background: 'light', $type: 'primary') {
+//   color: brand($background, $type);
+// }

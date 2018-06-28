@@ -1,54 +1,21 @@
-$color-primary: #FF7A5E;
-$color-primary-dark: #582600;
-$color-primary-light: #FFB1A8;
 
-$color-secondary: #101d2c;
-
-$color-grey-light-1 : #ededee;
-$color-grey-light-2: #babcbd;
-$color-grey-light-3: #999;
-$color-grey-dark-1: rgb(74, 82, 89);
-$color-grey-dark-2: rgb(28, 32, 38);
-$color-grey-dark-3: rgb(4, 4, 4);
-
-
-
-
-// FONT VARIABLES
-
-
-/************* FONTS *************/
+// *** FONTS *** //
 $font-primary: 'Cormorant Garamond', serif;
-$base-font: 'Cormorant Garamond', 'Cormorant', serif;
-$secondary-font: 'Lato', 'Open Sans', sans-serif;
-$logo-font: 'Courier New', Courier, monospace;
+$font-secondary: 'Open Sans', sans-serif;
+$font-tertiary: 'Raleway', serif;
+
+// *** FONT SIZING *** //
+$fs-5: 4.2rem;
+$fs-4: 3.6rem;
+$fs-3: 2.6rem;
+$fs-2: 2.0rem;
+$fs-1: 1.8rem;
+// base font size: 1.6rem
+$fs-s2: 1.4rem;
+$fs-s1: 1.2rem;
 
 
-// RESPONSIVE BREAKPOINTS
-$bp-largest: 75em; // 1200px / 16px(default browser font  size) = 75
-$bp-large: 62.5em; // 1000px / 16px
-$bp-medium: 50em; // 800px / 16px
-$bp-small: 37.5em; // 000px / 16px
-
-/************* COLORS *************/
-
-$brand-color: #993300;
-$brand-color-light: #9c5d3e;
-$brand-color-hover: #789fbf;
-$accent-color: #a1a2a5;
-
-$grey-light:  #696969;
-$grey-medium: #2c2c2c;
-$grey-dark:   #161616;
-$grey-darker: #0b0b0b;
-
-$error-color: #691908;
-$success-color: #637c55;
-
-
-$primary-font-color: #d1d1d1;
-$secondary-font-color: #a7a7a7;
-
+// *** COLORS *** //
 $black-02: rgba(0, 0, 0, 0.02);
 $black-03: rgba(0, 0, 0, 0.03);
 $black-10: rgba(0, 0, 0, 0.1);
@@ -59,22 +26,20 @@ $black-50: rgba(0, 0, 0, 0.5);
 $black-60: rgba(0, 0, 0, 0.6);
 $black-70: rgba(0, 0, 0, 0.7);
 $black-80: rgba(0, 0, 0, 0.8);
-$black-85: rgba(0, 0, 0, 0.85);
 $black-90: rgba(0, 0, 0, 0.9);
 
-$grey-90: #191919;
-$grey-80: #2f2f2f;
-$grey-70: #464646;
-$grey-60: #5e5e5e;
-$grey-50: #757575;
-$grey-40: #8c8c8c;
-$grey-30: #a3a3a3;
-$grey-20: #bababa;
-$grey-10: #d1d1d1;
 $grey-05: #e8e8e8;
+$grey-10: #d1d1d1;
+$grey-20: #bababa;
+$grey-30: #a3a3a3;
+$grey-40: #8c8c8c;
+$grey-50: #757575;
+$grey-60: #5e5e5e;
+$grey-70: #464646;
+$grey-80: #2f2f2f;
+$grey-90: #191919;
+$grey-95: #111111;
 
-
-$white-10: rgba(255, 255, 255, 0.1);
 $white-10: rgba(255, 255, 255, 0.1);
 $white-20: rgba(255, 255, 255, 0.2);
 $white-30: rgba(255, 255, 255, 0.3);
@@ -85,14 +50,66 @@ $white-70: rgba(255, 255, 255, 0.7);
 $white-80: rgba(255, 255, 255, 0.8);
 $white-90: rgba(255, 255, 255, 0.9);
 
+$primary-color-1: #9a3437;
+$primary-color-2: #a7393d;
+$primary-color-3: #FF7A5E; // LOGO COLOR
+$primary-color-4: #c74746;
+$primary-color-5: #c6555a;
+$primary-color-6: #bf7177;
+$primary-color-7: #d3979b;
+$primary-color-8: #eccbd1;
+$primary-color-8: #f7eaed;
 
-/************* FONT SIZES *************/
+$error-color: darkred;
+$success-color: #637c55;
 
-$fs-5: 4.2rem;
-$fs-4: 3.6rem;
-$fs-3: 2.6rem;
-$fs-2: 2.0rem;
-$fs-1: 1.8rem;
+$base-color-light: #F5F5F5;
+$base-color-medium: #e1e1e1;
+$base-color-dark: #212121;
 
-$fs-s1: 1.3rem;
-$fs-s2: 1.1rem;
+/**********************************************************************
+
+// TEXT COLOR MANAGER VARIABLES
+// See @function contrast and @function brand in functions.scss
+// When selecting a text color select a mixin: 
+//                         1) @include text-color  -> OR
+//                         2) @include brand-text-color
+
+// pass in 2 arguements:  1) back-ground -> 'light' or 'dark'.
+//                        2) contrast level -> 'high', 'medium', 'low', 'hint'.
+//
+ eg -> @include text-color('light', 'high');
+*/
+
+$contrast-colors: (
+  'dark': (
+    'high': rgba(255, 255, 255, 0.87),
+    'medium': rgba(255, 255, 255, .60),
+    'low': rgba(255, 255, 255, .5),
+    'hint': rgba(255, 255, 255, .12)
+  ),
+  'light': (
+    'high': rgba(0, 0, 0, .87),
+    'medium': rgba(0, 0, 0, .60),
+    'low': rgba(0, 0, 0, .38),
+    'hint': rgba(0, 0, 0, .12)
+  ),
+);
+
+$brand-colors: (
+  'dark': (
+    'high': rgba(191, 113, 119, 0.87),
+    'medium': rgba(191, 113, 119, .60),
+    'low': rgba(191, 113, 119, .5),
+    'hint': rgba(191, 113, 119, .12)
+  ),
+  'light': (
+    'high': rgba(154, 52, 55, .87),
+    'medium': rgba(154, 52, 55, .60),
+    'low': rgba(154, 52, 55, .38),
+    'hint': rgba(154, 52, 55, .12)
+  ),
+);
+
+
+

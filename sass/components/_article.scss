@@ -1,6 +1,6 @@
 .article-container {
-  grid-column: 1 / -1;
-  grid-row: 2 / -1;
+  // grid-column: 1 / -1;
+  // grid-row: 2 / -1;
   min-height: 100vh;
   @include grid-lg;
   grid-template-rows: repeat(8, minmax(90px, auto));
@@ -29,7 +29,7 @@
 
   &__title {
     grid-column: 1 / -1;
-    font-family: $base-font;
+    font-family: $font-primary;
     font-size: $fs-4;
     font-weight: 100;
     position: relative;
@@ -37,37 +37,43 @@
 
   &__subtitle {
     grid-column: 1 / -1;
-    font-size: $fs-2;
-    font-family: $base-font;
-    color: $secondary-font-color;
+    font-size: $fs-3;
+    font-family: $font-primary;
+    @include text-color('light', 'medium');
     font-weight: 100;
   }
 
   &__quote {
     grid-column: 1 / -1;
-    font-family: $secondary-font;
-    color: $secondary-font-color;
-    letter-spacing: .15em;
+    font-family: $font-secondary;
+    @include text-color('light', 'medium');
+    letter-spacing: .12em;
+    line-height: 3.5rem;
     justify-self: start;
     text-align: center;
+    transform: translate(-3rem, 3rem);
+    font-size: 2.5rem;
+    font-weight: 100;
+
 
     &--icon {
-      transform: translate(-3px, -3px);
-      color: #555;
+      // transform: translate(-3px, -3px);
+      @include text-color('light', 'medium');
       font-size: 3.5rem;
+      transform: translate(-1rem, -1rem);
     }
   }
 
   &__cta {
     font-size: $fs-1;
-    color: $brand-color-light;
+    @include brand-text-color('light', 'high');
   }
 
   &__paragraph {
-    font-family: $secondary-font;
+    font-family: $font-primary;
     font-size: $fs-1;
     grid-column: 1 / -1;
-    letter-spacing: .1em;
+    // letter-spacing: .1em;
   }
 
   @include respond(tab-port) {

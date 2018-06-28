@@ -1,0 +1,59 @@
+.content {
+  grid-row: 2 / -1;
+  grid-column: 1 / -1;
+
+  @include grid-md;
+  grid-template-rows: repeat(16, 1fr);
+}
+
+.intro {
+  grid-column: 1 / -1;
+  grid-row: 1 / span 3;
+
+  .article {
+    grid-column: 3 / span 8;
+  }
+}
+
+.cakes {
+  grid-column: 1 / -1;
+  grid-row: 4 / span 3;
+
+  .article {
+    grid-column: span 8 / -3;
+    grid-row: 5 / span 3;
+   
+    &__quote {
+      transform: translate(-12rem, 6rem);
+
+    }
+  }
+}
+
+.delights {
+  grid-column: 1 / -1;
+  grid-row: 9 / span 3;
+  
+  .article {
+    grid-column: 3 / span 7;
+    grid-row: 4 / span 3;
+    
+    &__quote {
+      transform: translate(-6rem, 4rem);
+    }
+  }
+}
+
+.bread {
+  grid-column: 1 / -1;
+  grid-row: 13 / span 3;
+  
+  .article {
+    grid-column: span 7 / -3;
+    grid-row: 4 / span 3;
+    
+    &__quote {
+      transform: translate(-4rem, 6rem);
+    }
+  }
+}

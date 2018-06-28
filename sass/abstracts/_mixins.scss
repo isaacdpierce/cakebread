@@ -1,28 +1,4 @@
-/****************************************/
-
-// GRID MANAGER
-
-@mixin grid-lg {
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
-}
-
-@mixin grid-md {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
-@mixin grid-sm {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-}
-
-@mixin grid-full-span {
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
-}
-
-/****************************************/
+/***********************************************************************/
 
 // MEDIA QUERY MANAGER
 // $breakpoint arguement options:
@@ -45,6 +21,33 @@
 
 // 1em = 16px
 
+/****************************************/
+
+///* *** GRID MANAGER *** *///
+
+@mixin grid-lg {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+}
+
+@mixin grid-md {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin grid-sm {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+@mixin grid-full-span {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+///* *** MEDIA QUERIES *** *///
+
+
 @mixin respond($breakpoint) {
 
   @if $breakpoint == phone {
@@ -64,4 +67,28 @@
   }
 }
 
+/***********************************************************************/
+///* *** TEXT COLOR MANAGER *** *///
+
+@mixin text-color($background: 'light', $type: 'primary') {
+  color: contrast($background, $type);
+}
+// FUNCTION TO GO WITH ABOVE MIXIN - in funtions.scss
+// @function contrast($background: 'light', $type: 'primary') {
+//   $map: map-get($contrast-colors, $background);
+//   @return map-get($map, $type);
+// }
+
+/***********************************************************************/
+///* *** BRAND TEXT COLOR MANAGER *** *///
+
+@mixin brand-text-color($background: 'light', $type: 'primary') {
+  color: brand($background, $type);
+}
+
+// FUNCTION TO GO WITH ABOVE MIXIN - in funtions.scss
+// @function brand($background: 'light', $type: 'primary') {
+//   $map: map-get($brand-colors, $background);
+//   @return map-get($map, $type);
+// }
 
